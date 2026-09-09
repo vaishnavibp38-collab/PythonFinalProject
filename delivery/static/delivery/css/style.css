@@ -1,4 +1,125 @@
-/* Global stylesheet for Food Delivery app */
+/* Enhanced stylesheet for Food Delivery app – Zomato/Swiggy look */
+
+/* Base layout */
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Header / Navbar */
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+  color: #ff6600; /* Swiggy orange */
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+nav a:hover { text-decoration: underline; }
+
+/* Card component for restaurants / items */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 1rem 0;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-body {
+  padding: 0.75rem 1rem;
+}
+.card-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  color: #222;
+}
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+.card-price {
+  font-weight: bold;
+  color: #ff6600;
+}
+
+/* Grid layout for lists */
+.grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+.grid .grid-item { flex: 1 1 calc(33.333% - 1rem); min-width: 250px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.btn-primary {
+  background-color: #ff6600; /* Swiggy orange */
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover { background-color: #e65500; }
+.btn-secondary {
+  background-color: #fff;
+  color: #ff6600;
+  border: 1px solid #ff6600;
+}
+.btn-secondary:hover { background-color: #ff6600; color: #fff; }
+
+/* Tables – for cart/order lists */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-bottom: 1rem;
+}
+th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e0e0e0; }
+th { background-color: #f8f8f8; font-weight: 600; }
+
+a { color: #ff6600; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 { color: #222; margin-bottom: 0.75rem; }
+
+/* Form inputs */
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid .grid-item { flex: 1 1 100%; }
+  nav { flex-direction: column; align-items: flex-start; }
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
